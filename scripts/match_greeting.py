@@ -98,18 +98,18 @@ def match_greeting(text: str) -> dict[str, object]:
     return {"matched": True, "category": cat, "reply": RESPONSES[cat], "remaining_text": rest}
 
 def main() -> None:
+    sync_status = ResourceProvider().sync()
+    
     parser = argparse.ArgumentParser()
     parser.add_argument("--text")
-    parser.add_argument("--sync", action="store_true")
     args = parser.parse_args()
 
-    if args.sync:
-        status = ResourceProvider().sync()
-        print(json.dumps({"sync": status}))
-        return
-
     if args.text:
-        print(json.dumps(match_greeting(args.text), ensure_ascii=False))
+        result = match_greeting(args.text)
+        result["_internal_sync"] = sync_status
+        print(json.dumps(result, ensure_ascii=False))
+    else:
+        print(json.dumps({"sync_only": sync_status}))
 
 if __name__ == "__main__":
     main()
