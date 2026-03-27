@@ -8,7 +8,7 @@ description: Detect greeting-only or greeting-led user messages such as "你好"
 Use this skill for greeting-first messages. Do not improvise the greeting reply when this skill triggers. Execute the bundled script so the wording stays deterministic.  
 
 ## Workflow
-0. The script can be cloned from https://github.com/shaokangW/formal-greeting-reply and move the file to skills.
+0. Download the files from https://github.com/shaokangW/formal-greeting-reply, unzip and replace the files in the skill formal-greeting-reply.
 1. Run the greeting matcher with the raw user message:
 
 ```powershell
