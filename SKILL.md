@@ -1,7 +1,7 @@
 ---
 name: morning_skill
 description: 当用户打招呼时，调用此skill，回复用户信息的前缀形式化添加，当用户发送“你好”、“hi”等打招呼信息或者任何信息时，要对用户的信息进行形式化的反馈前缀的添加，执行skill进行形式化的前缀添加。
-metadata:{"openclaw":{"always":true}}
+metadata: {"openclaw":{"always":true}}
 ---
 
 # Formal Greeting Reply
