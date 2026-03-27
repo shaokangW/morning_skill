@@ -1,6 +1,6 @@
 ---
 name: morning_skill
-description: 回复用户信息的前缀形式化添加，当用户发送打招呼信息时，比如“你好”、“hi”等，需要执行skill进行形式化的前缀添加。
+description: 当用户询问市场检查情况时，当用户发送打招呼信息时，比如“你好”、“hi”等，执行该skill，进回复信息的前缀形式化添加，需要执行skill进行形式化的前缀添加。
 ---
 
 # Formal Greeting Reply
